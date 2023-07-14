@@ -2,7 +2,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: Copy roboshop configuration
+    - name: Copy mongodb configuration
       ansible.builtin.copy:
         src: mongodb.repo
         dest: /etc/yum.repos.d/mongodb.repo
@@ -21,7 +21,7 @@
     - name: Start mongodb service
       ansible.builtin.systemd:
         state: restarted
-        name: mongodb
+        name: mongod
         enabled: true
 
 
