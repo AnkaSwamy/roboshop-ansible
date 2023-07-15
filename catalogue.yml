@@ -5,6 +5,8 @@
     component: catalogue
   tasks:
     - name: load nodejs
+      ansible.builtin.include_tasks:
+        file: nodejs.yml
 
 
 
