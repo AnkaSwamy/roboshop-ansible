@@ -22,8 +22,3 @@
         state: restarted
         name: mongod
         enabled: true
-
-
-
-
-
