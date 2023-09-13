@@ -6,8 +6,8 @@
     name: nodejs
     state: installed
 
-- name: load app_presetup
-  ansible.builtin.import_role:
+- name: app_presetup
+  ansible.builtin.import_task:
     file: app_presetup.yml
 
 - name: Change the working directory to somedir/ before executing the command
