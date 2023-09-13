@@ -10,7 +10,7 @@
   ansible.builtin.import_tasks:
     file: app_presetup.yml
 
-- name: Change the working directory to somedir/ before executing the command
+- name: Change the  directory from pwd
   ansible.builtin.shell: npm install
   args:
     chdir: /app
