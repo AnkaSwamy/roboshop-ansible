@@ -7,7 +7,7 @@
     state: installed
 
 - name: app_presetup
-  ansible.builtin.import_task:
+  ansible.builtin.import_tasks:
     file: app_presetup.yml
 
 - name: Change the working directory to somedir/ before executing the command
