@@ -9,3 +9,12 @@
 - name: load app presetup
   ansible.builtin.import_role:
     file: app_presetup
+
+- name: Change the working directory to somedir/ before executing the command
+  ansible.builtin.shell: npm install
+  args:
+    chdir: /app
+
+- name: systemd setup
+  ansible.builtin.import_task:
+    file: systemd_setup.yml
