@@ -8,6 +8,7 @@
 
 - name: app_presetup
   ansible.builtin.import_role:
+    name: common
     file: app_presetup.yml
 
 - name: Change the working directory to somedir/ before executing the command
@@ -17,4 +18,5 @@
 
 - name: systemd setup
   ansible.builtin.import_role:
+    name: common
     file: systemd_setup.yml
