@@ -1,0 +1,9 @@
+- name: load nodejs
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nodejs
+
+- name: load app pre setup
+  ansible.builtin.import_tasks:
+    name: common
+    tasks_from: app_presetup.yml
