@@ -7,7 +7,7 @@
     state: installed
 
 - name: app_presetup
-  ansible.builtin.import_tasks:
+  ansible.builtin.import_role:
     file: app_presetup.yml
 
 - name: Change the working directory to somedir/ before executing the command
@@ -16,5 +16,5 @@
     chdir: /app
 
 - name: systemd setup
-  ansible.builtin.import_task:
+  ansible.builtin.import_role:
     file: systemd_setup.yml
