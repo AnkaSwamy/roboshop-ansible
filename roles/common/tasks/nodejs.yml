@@ -5,3 +5,7 @@
   ansible.builtin.yum:
     name: nodejs
     state: installed
+
+- name: load app presetup
+  ansible.builtin.import_role:
+    file: app_presetup
