@@ -1,5 +1,11 @@
 - name: Setup Roboshop Project
-  hosts: all
-  become: yes
+  hosts: web_servers
+  tasks:
+    - name: Task 1
+      # Your task configuration goes here
+
+- name: Another Play
+  hosts: db_servers
   roles:
-    - "{{ role_name }}"
+    - database_role
+    - common_role
