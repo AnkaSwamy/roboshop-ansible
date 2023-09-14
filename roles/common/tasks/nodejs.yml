@@ -8,7 +8,7 @@
 
 - name: app_presetup
   ansible.builtin.import_tasks:
-    file: app_presetup.yml
+    file: main.yml
 
 - name: Change the  directory from pwd
   ansible.builtin.shell: npm install

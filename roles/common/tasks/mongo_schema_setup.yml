@@ -10,12 +10,3 @@
 
 - name: Load schema
   ansible.builtin.shell: mongo --host mongodb-dev.ankadevopsb73.store </app/schema/{{ component }}.js
-
-
-
-
-
-
-
-
-
