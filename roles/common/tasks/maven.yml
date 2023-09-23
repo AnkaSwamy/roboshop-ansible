@@ -3,7 +3,7 @@
     name: Maven
     state: installed
 
-- name: load apppresetup
+- name: load app_presetup
   ansible.builtin.import_tasks:
     file: app_presetup.yml
 
@@ -11,7 +11,6 @@
   ansible.builtin.shell: mvn clean package ; mv target/{{ component }}-1.0.jar {{ component }}.jar
   args:
     chdir: /app
-
 
 - name: load mysql schema setup
   ansible.builtin.import_tasks:
