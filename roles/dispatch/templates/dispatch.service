@@ -2,7 +2,7 @@
 Description = Dispatch Service
 [Service]
 User=roboshop
-Environment=rabbitmq-dev.ankadevopsb73.store
+Environment=AMQP_HOST={{ lookup('amazon.aws.aws_ssm', 'roboshop.{{env}}.dispatch.amqp-host', region='us-east-1') }}
 Environment=AMQP_USER=roboshop
 Environment=AMQP_PASS=roboshop123
 ExecStart=/app/dispatch
@@ -10,3 +10,4 @@ SyslogIdentifier=dispatch
 
 [Install]
 WantedBy=multi-user.target
+
